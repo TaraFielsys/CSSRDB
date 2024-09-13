@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <style>
+        h1 {
+            color: purple;
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Database Logo" width="100%" height="100px">
+        </div>
+        <h1>Gallery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="result.html">Results</a></li>
+            <li><a href="https://primer3.ut.ee/" target="_blank">Primer3</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>

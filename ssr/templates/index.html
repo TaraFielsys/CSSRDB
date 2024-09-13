@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken SSRDB</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Database Logo" width="100%" height="100px">
+            <h1>SSRDB - A SSR marker database for chicken</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="result.html">Results</a></li>
+            <li><a href="https://primer3.ut.ee/" target="_blank">Primer3</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>Welcome to the Chicken SSR Database</h2>
+            <p style="text-align: justify;">Simple Sequence Repeats (SSRs) are short repeating stretches of DNA usually 1-4 or 1-6 nucleotides in length. Identification, characterization and analysis of SSR markers is paramount towards understanding genetic diversity, structural analysis, association mapping, recapitulate biomarkers and to classify endotypes. They are central to various breeding programs exhibiting genome-wide representation, robust and high reproducibility, co-dominant inheritance, high polymorphism with multiple alleles per locus, transferability between species and low requirements for expertise and instrumentation. Hence, they are a popular choice for relatively low cost genotyping.  SSRDB is a database that provides a catalogue of SSR makers in chicken and duck. This is in relation to our efforts to incentivize economical and functional genomic mechanisms underlying the bioactivities of the two-major and easily available protein sources known to man. Nutritional value and quality of the meat still remains one of the significant challenges to researchers and the broiler industry. Standardization of SSR markers in the two domesticated avian species will support the increase of fundamental genetic research for breeding, improvements and facilitate our understanding of human health and disease. </p>
+        </section>
+        <div class="image-container">
+            <img src="{% static 'images/image1.png' %}" alt="Image 1" class="image">
+            <img src="{% static 'images/image2.png' %}" alt="Image 2" class="image">
+            <img src="{% static 'images/image3.png' %}" alt="Image 3" class="image">
+        </div>
+    </main>
+</body>
+</html>

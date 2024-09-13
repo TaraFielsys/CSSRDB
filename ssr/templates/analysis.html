@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        h1 {
+            color: purple;
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Database logo" width="100%" height="100px">
+        </div>
+        <h1>Analysis</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'analysis' %}">Analysis</a></li>
+            <li><a href="result.html">Results</a></li>
+            <li><a href="https://primer3.ut.ee/" target="_blank">Primer3</a></li>
+            <li><a href="{% url 'documentation' %}">Documentation</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="input-form">
+            <h2>Enter Analysis Parameters</h2>
+            <form action="{% url 'analyze' %}" method="POST">
+                {% csrf_token %}
+                <label for="species">Species:</label>
+                <select id="species" name="species">
+                    <option value="">Select</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Duck">Duck</option>
+                </select><br><br>
+                <label for="chromosome">Chromosome Number:</label>
+                <input type="number" id="chromosome" name="chromosome" min="1" max="39" required><br><br>
+                <label for="ssrtype">Type of SSR:</label>
+                <select id="ssrtype" name="ssrtype" placeholder="SSR Type" required>
+                    <option value="">Select</option>
+                    <option value="c">Compound</option>
+                    <option value="p1">Mononucleotide</option>
+                    <option value="p2">Dinucleotide</option>
+                    <option value="p3">Trinucleotide</option>
+                    <option value="p4">Tetranucleotide</option>
+                    <option value="p5">Pentanucelotide</option>
+                    <option value="p6">Hexanucelotide</option>
+                </select>
+                <p><b>Enter a value between 1 and 100000</b></p>
+                <label for="start">Start position:</label>
+                <input type="number" id="Start" name="start" min="1" max="100000"><br><br>
+                <label for="end">End position:</label>
+                <input type="number" id="End" name="end" min="1" max="100000"><br><br>
+                <button id="submit-btn">Predict SSRs</button>
+            </form>
+            <div class="button-container">
+
+                <a href="{% url 'result' id=object.id chromosome=object.chromosome ssrtype=object.ssrtype ssrsequence=object.ssrsequence size=object.size start=object.start end=object.end %}" class="proceed-button">Proceed to Results</a>
+
+            </div>
+            <canvas id="chart-canvas"></canvas>
+        </section>
+    </main>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

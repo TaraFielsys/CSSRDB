@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dr. M. Balakrishnan</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <style>
+        h1 {
+            color: purple;
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Database Logo" width="100%" height="100px">
+        </div>
+        <h1>Contact</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="result.html">Results</a></li>
+            <li><a href="https://primer3.ut.ee/" target="_blank">Primer3</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="contact-info">
+            <h2>Dr. M. Balakrishnan</h2>
+            <p><strong>Principal Scientist</strong></p>
+            <p><strong>ICM Division</strong></p>
+            <p>ICAR-NAARM</p>
+            <p>Rajendranagar, Hyderabad-500030</p>
+            <p><strong>Phone:</strong> 0404-24581317</p>
+            <p><strong>Fax:</strong> 040-24015912</p>
+            <p><strong>Mobile:</strong> 9908933588, 8639867281</p>
+            <p><strong>Email:</strong> <a href="mailto:balakrishnan@naarm.org.in">balakrishnan@naarm.org.in</a>, <a href="mailto:mbkrishnan72@gmail.com">mbkrishnan72@gmail.com</a></p>
+        </section>
+    </main>
+</body>
+</html>

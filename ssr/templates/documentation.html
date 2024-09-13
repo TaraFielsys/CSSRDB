@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Chicken SSR Database</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        h1 {
+            color: purple;
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Database logo" width="100%" height="100px">
+        </div>
+        <h1>Documentation</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="result.html">Results</a></li>
+            <li><a href="https://primer3.ut.ee/" target="_blank">Primer3</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="documentation">
+            <h2>Downloadable Files</h2>
+            <p>You can download the following files related to the Chicken SSR Database:</p>
+            <ul>
+                <li><a href="SSR.zip">SSR Data</a></li>
+                <li><a href="https://example.com/user-guide.pdf">User Guide</a></li>
+            </ul>
+            
+            <h2>Original Paper</h2>
+            <p>The Chicken SSR Database is based on the research published in the following paper:</p>
+            <p><strong>Title:</strong> [Paper Title]</p>
+            <p><strong>Authors:</strong> [Author Names]</p>
+            <p><strong>Journal:</strong> [Journal Name], [Volume](Issue), [Pages], [Year]</p>
+            <p><a href="https://example.com/original-paper.pdf">Download Paper</a></p>
+        </section>
+    </main>
+</body>
+</html>
